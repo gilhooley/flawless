@@ -2,18 +2,16 @@
   "name": "flawless",
   "version": "1.0.0",
   "description": "These diamonds?",
-  "main": "flawless.js",
+  "main": "flawless",
   "dependencies": {
     "j-shellscript": "^0.1.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "diamond"
   },
   "keywords": [
     "beyonce",
     "flawless",
-    "beyhive"
+    "shellscript"
   ],
   "author": "Katherine Gilhooley <k.gilhooley@gmail.com> (http://katherinegilhooley.com/)",
   "license": "ISC"
