@@ -4,41 +4,25 @@
 var shellscript = require('shellscript').globalize();
 var inquirer = require('inquirer');
 
-var qTheseDiamonds = {
-  type: 'input',
-  name: 'these diamonds',
-  message: 'These diamonds?',
-  default: 'FLAWLESS'
-};
+var Question = function(name, message){
+  this.type = 'input';
+  this.name = name;
+  this.message = message;
+  this.default = 'FLAWLESS';
+}
 
-var qMyDiamonds = {
-  type: 'input',
-  name: 'my diamonds',
-  message: 'My diamonds?',
-  default: 'FLAWLESS'
-};
-
-var qThisRock = {
-  type: 'input',
-  name: 'this rock',
-  message: 'This rock?',
-  default: 'FLAWLESS'
-};
-
-var qMyRock = {
-  type: 'input',
-  name: 'my rock',
-  message: 'My rock?',
-  default: 'FLAWLESS'
-};
+var qTheseDiamonds = new Question('these diamonds','These diamonds?');
+var qMyDiamonds = new Question('my diamonds','My diamonds?');
+var qThisRock = new Question('this rock','This rock?');
+var qMyRock = new Question('my rock','My rock?');
 
 var gems = [qTheseDiamonds, qMyDiamonds, qThisRock, qMyRock];
 
-var finish = function(){
+var win = function(){
   shell('say -v vicki I woke up like this. I woke up like this');
 };
 
-var fail = function(){
+var lose = function(){
   shell('say -v vicki Bow down, bitches');
 };
 
@@ -51,9 +35,9 @@ module.exports = function(){
       (answers['this rock'] === 'flawless' || answers['this rock'] === "FLAWLESS") &&
       (answers['my rock'] === 'flawless' || answers['my rock'] === "FLAWLESS")
     ){
-      finish();
+      win();
     } else {
-      fail();
+      lose();
     }
   })
 

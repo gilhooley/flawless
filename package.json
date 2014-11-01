@@ -1,8 +1,8 @@
 {
   "name": "flwlss",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A deeply serious command-line experience",
-  "main": "flawless",
+  "main": "flawless.js",
   "dependencies": {
     "inquirer": "^0.8.0",
     "j-shellscript": "^0.1.0"
