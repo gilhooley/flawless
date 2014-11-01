@@ -10,11 +10,13 @@ These diamonds?
 Download
 
 
-'npm install'
-
-
-'node flawless'
+`npm install`
 
 
 Speakers++
+
+
+`node flawless`
+
+
 
