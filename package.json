@@ -1,7 +1,7 @@
 {
   "name": "flawless",
-  "version": "1.0.0",
-  "description": "These diamonds?",
+  "version": "0.1.0",
+  "description": "A deeply serious command-line experience",
   "main": "flawless",
   "dependencies": {
     "inquirer": "^0.8.0",
@@ -15,5 +15,8 @@
     "inquirer"
   ],
   "author": "Katherine Gilhooley <k.gilhooley@gmail.com> (http://katherinegilhooley.com/)",
-  "license": "ISC"
+  "licenses": [{
+      "type": "MIT",
+      //"url": "https://github.com/bisutun/flawless/"
+    }]
 }
