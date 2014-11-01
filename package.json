@@ -8,6 +8,10 @@
     "j-shellscript": "^0.1.0"
   },
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bisutun/flawless.git"
+  },
   "keywords": [
     "beyonce",
     "flawless",
