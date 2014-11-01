@@ -4,14 +4,15 @@
   "description": "These diamonds?",
   "main": "flawless",
   "dependencies": {
+    "inquirer": "^0.8.0",
     "j-shellscript": "^0.1.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "beyonce",
     "flawless",
-    "shellscript"
+    "shellscript",
+    "inquirer"
   ],
   "author": "Katherine Gilhooley <k.gilhooley@gmail.com> (http://katherinegilhooley.com/)",
   "license": "ISC"
