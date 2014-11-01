@@ -1,6 +1,6 @@
 {
-  "name": "flawless",
-  "version": "0.1.0",
+  "name": "flwlss",
+  "version": "0.1.1",
   "description": "A deeply serious command-line experience",
   "main": "flawless",
   "dependencies": {
@@ -16,7 +16,6 @@
   ],
   "author": "Katherine Gilhooley <k.gilhooley@gmail.com> (http://katherinegilhooley.com/)",
   "licenses": [{
-      "type": "MIT",
-      //"url": "https://github.com/bisutun/flawless/"
+      "type": "MIT"
     }]
 }
