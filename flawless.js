@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 'use strict';
 
-var shellscript = require('shellscript').globalize();
+require('shellscript').globalize();
 var inquirer = require('inquirer');
 
 var Question = function(name, message){
