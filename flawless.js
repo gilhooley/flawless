@@ -23,11 +23,12 @@ var win = function(){
 };
 
 var lose = function(){
+  shell('echo Try again!');
   shell('say -v vicki Bow down, bitches');
+  quiz();
 };
 
-module.exports = function(){
-
+var quiz = function(){
   inquirer.prompt(gems, function( answers ) {
     if(
       (answers['these diamonds'] === 'flawless' || answers['these diamonds'] === "FLAWLESS") &&
@@ -41,4 +42,7 @@ module.exports = function(){
     }
   })
 
+};
+module.exports = function(){
+  quiz();
 }();
