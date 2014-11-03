@@ -3,7 +3,7 @@ flawless
 
 These diamonds?
 
-(A deeply serious command-line experience.)
+(A deeply serious command-line experience. Unpackaged dependency: Beyonce literacy.)
 
 
 ## Getting started
