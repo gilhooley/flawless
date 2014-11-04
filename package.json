@@ -1,6 +1,6 @@
 {
   "name": "flwlss",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A deeply serious command-line experience",
   "main": "flawless.js",
   "dependencies": {
@@ -10,7 +10,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/bisutun/flawless.git"
+    "url": "git://github.com/gilhooley/flawless.git"
   },
   "keywords": [
     "beyonce",
