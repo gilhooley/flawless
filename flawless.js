@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 'use strict';
 
-require('shellscript').globalize();
+require('j-shellscript').globalize();
 var inquirer = require('inquirer');
 
 var Question = function(name, message){

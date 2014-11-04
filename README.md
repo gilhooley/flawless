@@ -7,7 +7,7 @@ These diamonds?
 
 
 ## Getting started
-Download
+Download || `npm install flwlss`
 
 
 `npm install`
