@@ -1,48 +1,33 @@
-// #!/usr/bin/env node
 'use strict';
 
 require('j-shellscript').globalize();
+
+var R        = require('ramda');
 var inquirer = require('inquirer');
 
-var Question = function(name, message){
-  this.type = 'input';
-  this.name = name;
-  this.message = message;
-  this.default = 'FLAWLESS';
-}
+var questions = ['These diamonds?', 'My diamonds?', 'This rock?', 'My rock?'];
 
-var qTheseDiamonds = new Question('these diamonds','These diamonds?');
-var qMyDiamonds = new Question('my diamonds','My diamonds?');
-var qThisRock = new Question('this rock','This rock?');
-var qMyRock = new Question('my rock','My rock?');
+var gems = R.map(function(q) {
+  return {
+    type: 'input',
+    name: q,
+    message: q,
+    default: 'FLAWLESS'
+  };
+}, questions);
 
-var gems = [qTheseDiamonds, qMyDiamonds, qThisRock, qMyRock];
+var allFlawless = R.all(R.or(R.eq('FLAWLESS'), R.eq('flawless')));
 
-var win = function(){
-  shell('say -v vicki I woke up like this. I woke up like this');
-};
-
-var lose = function(){
-  shell('echo Try again!');
-  shell('say -v vicki Bow down, bitches');
-  quiz();
-};
-
-var quiz = function(){
-  inquirer.prompt(gems, function( answers ) {
-    if(
-      (answers['these diamonds'] === 'flawless' || answers['these diamonds'] === "FLAWLESS") &&
-      (answers['my diamonds'] === 'flawless' || answers['my diamonds'] === "FLAWLESS") &&
-      (answers['this rock'] === 'flawless' || answers['this rock'] === "FLAWLESS") &&
-      (answers['my rock'] === 'flawless' || answers['my rock'] === "FLAWLESS")
-    ){
-      win();
+module.exports = function quiz() {
+  inquirer.prompt(gems, function(answers) {
+    if (allFlawless(R.values(answers))) {
+      shell('say -v vicki I woke up like this. I woke up like this');
+      shell('echo You flawless')
     } else {
-      lose();
+      shell('echo Try again!');
+      shell('say -v vicki Bow down, bitches');
+      // Give them up to 4000 chances to get it right (stack limit, don't feel like trampolining)
+      quiz();
     }
-  })
-
+  });
 };
-module.exports = function(){
-  quiz();
-}();

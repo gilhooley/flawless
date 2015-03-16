@@ -1,13 +1,16 @@
 {
   "name": "flwlss",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A deeply serious command-line experience",
   "main": "flawless.js",
+  "bin" : { "flwlss" : "./cli.js" },
+  "engines" : { "node" : ">=0.10.3 <0.12" },
+  "engineStrict": true,
   "dependencies": {
     "inquirer": "^0.8.0",
-    "j-shellscript": "^0.1.0"
+    "j-shellscript": "^0.1.0",
+    "ramda": "^0.11.0"
   },
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/gilhooley/flawless.git"
@@ -19,7 +22,5 @@
     "inquirer"
   ],
   "author": "Katherine Gilhooley <k.gilhooley@gmail.com> (http://katherinegilhooley.com/)",
-  "licenses": [{
-      "type": "MIT"
-    }]
+  "license": "MIT"
 }

@@ -3,20 +3,13 @@ flawless
 
 These diamonds?
 
-(A deeply serious command-line experience. Unpackaged dependency: Beyonce literacy.)
-
+(A deeply serious command-line experience. Unpackaged dependency: Beyoncé literacy.)
 
 ## Getting started
-Download || `npm install flwlss`
+Crank up volume
 
+```bash
+$ npm install -g flwlss
 
-`npm install`
-
-
-Speakers++
-
-
-`node flawless`
-
-
-
+$ flwlss
+```
